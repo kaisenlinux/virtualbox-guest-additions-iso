@@ -1,0 +1,39 @@
+Source: virtualbox-guest-additions-iso
+Section: non-free/misc
+Priority: optional
+XSBC-Original-Maintainer: Debian Virtualbox Team <team+debian-virtualbox@tracker.debian.org>
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://www.virtualbox.org
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/virtualbox-guest-additions-iso
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/virtualbox-guest-additions-iso.git
+XS-Autobuild: yes
+
+Package: virtualbox-guest-additions-iso
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: virtualbox (>= ${source:Upstream-Version})
+Conflicts: virtualbox-2.0,
+           virtualbox-2.1,
+           virtualbox-2.2,
+           virtualbox-3.0,
+           virtualbox-3.1,
+           virtualbox-3.2,
+           virtualbox-4.0,
+           virtualbox-4.1,
+           virtualbox-4.2,
+           virtualbox-4.3,
+           virtualbox-5.0,
+           virtualbox-5.1,
+           virtualbox-5.2,
+           virtualbox-6.0,
+Description: guest additions iso image for VirtualBox
+ VirtualBox is a free x86 virtualization solution allowing a wide range of
+ x86 operating systems such as Windows, DOS, BSD or Linux to run on a
+ Linux system.
+ .
+ This package provides an iso image which contains the guest additions
+ for Linux, Solaris and Windows to be installed on the host system. The guest
+ systems then can mount the iso and install the guest additions from there.

@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	cp VBoxGuestAdditions_*.iso debian/virtualbox-guest-additions-iso/usr/share/virtualbox/VBoxGuestAdditions.iso
