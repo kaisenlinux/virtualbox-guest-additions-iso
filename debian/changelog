@@ -1,3 +1,15 @@
+virtualbox-guest-additions-iso (6.1.34-1kaisen) kaisen-packages; urgency=medium
+
+  * Import ISO for Virtualbox 6.1.34
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Fri, 22 Apr 2022 21:23:02 +0100
+
+virtualbox-guest-additions-iso (6.1.34-1) unstable; urgency=medium
+
+  * New upstream version 6.1.34
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 20 Apr 2022 11:20:41 +0200
+
 virtualbox-guest-additions-iso (6.1.32-1kaisen) kaisen-packages; urgency=medium
 
   * Import ISO for Virtualbox 6.1.32
