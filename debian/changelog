@@ -1,3 +1,9 @@
+virtualbox-guest-additions-iso (6.1.36-2kaisen) kaisen-packages; urgency=medium
+
+  * Add Virtualbox as dependancy instead of a recommended package
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 11 Sep 2022 01:17:02 +0100
+
 virtualbox-guest-additions-iso (6.1.36-1kaisen) kaisen-packages; urgency=medium
 
   * Import ISO for Virtualbox 6.1.36
