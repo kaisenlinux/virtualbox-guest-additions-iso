@@ -4,7 +4,7 @@ Priority: optional
 XSBC-Original-Maintainer: Debian Virtualbox Team <team+debian-virtualbox@tracker.debian.org>
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Rules-Requires-Root: no
 Homepage: https://www.virtualbox.org
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/virtualbox-guest-additions-iso
@@ -14,7 +14,7 @@ XS-Autobuild: yes
 Package: virtualbox-guest-additions-iso
 Architecture: all
 Depends: virtualbox (>= ${source:Upstream-Version}),
-	 ${misc:Depends}
+         ${misc:Depends}
 Conflicts: virtualbox-2.0,
            virtualbox-2.1,
            virtualbox-2.2,
