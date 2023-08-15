@@ -17,33 +17,33 @@ ORIG_TARBALL=`readlink -e ../`/VBoxGuestAdditions_${UPSTREAM_VERSION}.iso
 
 ORGDIR=`pwd`
 
-cd `dirname $ORIG_TARBALL`
-if ! wget -O - http://download.virtualbox.org/virtualbox/$UPSTREAM_VERSION/SHA256SUMS | grep iso | sha256sum -c --strict -; then
+cd `dirname ${ORIG_TARBALL}`
+if ! wget -O - http://download.virtualbox.org/virtualbox/${UPSTREAM_VERSION}/SHA256SUMS | grep iso | sha256sum -c --strict -; then
   echo "Error: checksum doesn't match."
   exit 1
 fi
-cd $ORGDIR
+cd ${ORGDIR}
 
 PACKAGE_NAME=`awk '/^Source: / { print $2 }' debian/control`
 
-if [ -z "$PACKAGE_NAME" ]; then
+if [ -z "${PACKAGE_NAME}" ]; then
   echo "Error: couldn't determine package name."
   exit 1
 fi
 
 TMP=`mktemp -d`
 
-if [ -z "$TMP" ]; then
+if [ -z "${TMP}" ]; then
   echo "Error: couldn't create a tmp dir."
   exit 1
 fi
 
-trap 'rm -r $TMP' EXIT
+trap 'rm -r ${TMP}' EXIT
 
-mkdir $TMP/${PACKAGE_NAME}-$UPSTREAM_VERSION
-mv $ORIG_TARBALL $TMP/${PACKAGE_NAME}-$UPSTREAM_VERSION/
-cd $TMP
-tar cJf ${PACKAGE_NAME}_$UPSTREAM_VERSION.orig.tar.xz ${PACKAGE_NAME}-$UPSTREAM_VERSION
-mv ${PACKAGE_NAME}_$UPSTREAM_VERSION.orig.tar.xz $ORGDIR/../
-cd $ORGDIR
-echo "Done, now you can run gbp import-orig ../${PACKAGE_NAME}_$UPSTREAM_VERSION.orig.tar.xz"
+mkdir ${TMP}/${PACKAGE_NAME}-${UPSTREAM_VERSION}
+mv ${ORIG_TARBALL} ${TMP}/${PACKAGE_NAME}-${UPSTREAM_VERSION}/
+cd ${TMP}
+tar cJf ${PACKAGE_NAME}_${UPSTREAM_VERSION}.orig.tar.xz ${PACKAGE_NAME}-${UPSTREAM_VERSION}
+mv ${PACKAGE_NAME}_${UPSTREAM_VERSION}.orig.tar.xz ${ORGDIR}/../
+cd ${ORGDIR}
+echo "Done, now you can run \ngbp import-orig ../${PACKAGE_NAME}_${UPSTREAM_VERSION}.orig.tar.xz"
