@@ -1,3 +1,16 @@
+virtualbox-guest-additions-iso (7.0.14-1kaisen) kaisen-packages; urgency=medium
+
+  * Import ISO for Virtualbox 7.0.14
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Thu, 15 Feb 2024 09:57:17 +0100
+
+virtualbox-guest-additions-iso (7.0.14-1) unstable; urgency=medium
+
+  * New upstream version 7.0.14
+  * Update get-orig-source.sh script
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 17 Jan 2024 09:45:24 +0100
+
 virtualbox-guest-additions-iso (7.0.12-1kaisen) kaisen-packages; urgency=medium
 
   * Import ISO for Virtualbox 7.0.12
