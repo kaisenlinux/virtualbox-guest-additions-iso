@@ -13,8 +13,7 @@ XS-Autobuild: yes
 
 Package: virtualbox-guest-additions-iso
 Architecture: all
-Depends: ${misc:Depends}
-Recommends: virtualbox (>= ${source:Upstream-Version})
+Depends: virtualbox (>= ${virtualbox:Version}), virtualbox (<< ${virtualbox:nextVersion}), ${misc:Depends}
 Conflicts: virtualbox-2.0,
            virtualbox-2.1,
            virtualbox-2.2,

@@ -1,7 +1,13 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/default.mk
+
 %:
 	dh $@
 
 override_dh_auto_install:
 	cp VBoxGuestAdditions_*.iso debian/virtualbox-guest-additions-iso/usr/share/virtualbox/VBoxGuestAdditions.iso
+
+override_dh_gencontrol:
+	dh_gencontrol -- \
+		-Vvirtualbox:Version=$(DEB_VERSION_UPSTREAM)-1kaisen -Vvirtualbox:nextVersion=$(DEB_VERSION_UPSTREAM)-zkaisen

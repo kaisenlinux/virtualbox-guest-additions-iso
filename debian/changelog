@@ -1,3 +1,11 @@
+virtualbox-guest-additions-iso (7.0.14-2kaisen) kaisen-packages; urgency=medium
+
+  * Update dependancies (add the virtualbox package on the Depends: field) 
+  * Update rules
+  * Remove the Recommends field
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 19 Feb 2024 01:18:52 +0100
+
 virtualbox-guest-additions-iso (7.0.14-1kaisen) kaisen-packages; urgency=medium
 
   * Import ISO for Virtualbox 7.0.14
