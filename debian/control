@@ -3,8 +3,8 @@ Section: non-free/misc
 Priority: optional
 XSBC-Original-Maintainer: Debian Virtualbox Team <team+debian-virtualbox@tracker.debian.org>
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
-Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
 Rules-Requires-Root: no
 Homepage: https://www.virtualbox.org
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/virtualbox-guest-additions-iso
