@@ -1,3 +1,9 @@
+virtualbox-guest-additions-iso (7.1.4-1kaisen) kaisen-packages; urgency=medium
+
+  * Import ISO for Virtualbox 7.1.4
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Fri, 25 Oct 2024 15:39:46 +0200
+
 virtualbox-guest-additions-iso (7.0.18-1kaisen) kaisen-packages; urgency=medium
 
   * Import ISO for Virtualbox 7.0.18
